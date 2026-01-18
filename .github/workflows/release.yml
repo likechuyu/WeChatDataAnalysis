@@ -58,7 +58,7 @@ jobs:
         working-directory: desktop
         shell: pwsh
         run: |
-          npm version $env:VERSION --no-git-tag-version
+          npm version $env:VERSION --no-git-tag-version --allow-same-version
 
       - name: Build Windows installer
         working-directory: desktop
@@ -75,4 +75,3 @@ jobs:
           files: |
             desktop/dist/*Setup*.exe
             desktop/dist/*Setup*.exe.blockmap
-
